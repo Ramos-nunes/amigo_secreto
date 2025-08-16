@@ -1,0 +1,39 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Amigo Secreto</title>
+</head>
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title"><i class="fas fa-gift"></i> Amigo Secreto</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
+        </header>
+        
+        <section class="input-section">
+            <p class="intro">Uma atividade divertida para promover integração entre alunos da Alura!</p>
+            <h2 class="section-title">Digite o nome dos seus amigos (<span id="contadorAmigos">0</span>)</h2>
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+                <button class="button-add" onclick="adicionarAmigo()"><i class="fas fa-plus"></i> Adicionar</button>
+            </div>
+            <div id="errorMessage" class="error hidden"></div>
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <button class="button-clear" onclick="limparLista()">Limpar Lista</button>
+            <div class="button-container">
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                    <i class="fas fa-dice"></i> Sortear amigo
+                </button>
+            </div>
+            <ul id="resultado" class="result-list show" aria-live="polite"></ul>
+        </section>
+    </main>
+    <script src="app.js" defer></script>
+</body>
+</html>
